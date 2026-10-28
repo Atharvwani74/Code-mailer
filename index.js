@@ -6,7 +6,7 @@ import mailRoutes from './routes/mail.routes.js'
 const app = express()
 
 const PORT = 5000
-
+app.use(express.json())
 app.use('/api/auth',authRoutes)
 app.use('/api/files',fileRoutes)
 app.use('/api/mails',mailRoutes)
